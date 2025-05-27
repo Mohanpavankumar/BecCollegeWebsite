@@ -19,12 +19,11 @@ let Placements=() =>{
 	const [data, setData] = useState([]);
 
 	const getData = () => {
-	getPlacementsNotifications().then(res =>
-			setData(res.data);
-		).catch(err =>
-			console.log('something went wrong', err);
-		)
-	}
+		getPlacementsNotifications()
+		  .then(res => setData(res.data))
+		  .catch(err => console.log('something went wrong', err));
+	  };
+	  
 
 	useEffect(() => {
 		getData();
